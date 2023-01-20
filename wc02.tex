@@ -30,6 +30,15 @@
 
   \begin{solution}
     % Enter your solution here.
+    
+    (a) If the guide announces that exactly $k$ compasses are faulty where $ 0 \leq k \leq n $, and the hikers are all highly logical and respond truthfully, then each hiker can know whether his compass is faulty or not by looking at the compasses of all the other hikers. If the hiker counts exactly $ k $ faulty compasses, then he knows that his own compass is not faulty, therefore, he can report his compass as ``Working''. \\ 
+    If the hiker counts exactly $ k - 1 $ compasses as faulty, then he can infer that his own compass is also faulty since there are exactly $ k $ faulty compasses, therefore he can report it as ``Faulty''.
+
+    (b) If the guide announces that at least $ k $ compasses are faulty, where $ 1 \leq k \leq (n - 1) $, and a hiker finds a way to infer that his own compass is ``Faulty'', then no subsequent hikers can respond with ``Can't tell''. \\ 
+    This statement holds true in the case that the hiker does not see at least $k$ number of faulty compasses. If a hiker sees at least $k$ number of faulty compasses, then he can't infer about his own compass. However, if a hiker does not see at least $k$ faulty compasses, that is, he sees $ k - 1 $ faulty compasses, then he can infer that his own compass is faulty since there have to be at least $k$ faulty compasses. Hence, he can say ``Faulty'' about his own compass, then all the other hikers can know the condition of their own compass and no subsequent hiker will say ``Can't tell''.
+
+    (c) If the guide announces that at most $k$ compasses are faulty where $ 1 \leq k \leq (n - 1) $, then we can argue that if a hiker does not see at most $k$ faulty compasses, then he can't infer anything about his own compass as it still may be faulty or it may be working. However, if a hiker sees at most $k$ faulty compasses, then he can infer about his own compass that it should be working, so the hiker will respond with ``Working''. Then no subsequent hikers can respond with ``Can't tell''. \\ 
+    Then our statement is: As soon as a hiker responds, ``Working'', no subsequent hikers will responds, ``Can't tell''.
   \end{solution}
 \end{questions}
 
