@@ -52,6 +52,29 @@ Express each of these compound propositions as an English sentence.
     \item[(h)] $\neg q \lor (\neg p \land q) $
 \end{itemize}
 \end{problem}
+
+\begin{questions}
+    \question
+    \begin{solution}
+        
+        (a) The election is \textbf{\textit{not}} decided
+
+        (b) The election is decided \textbf{\textit{or}} the votes have been counted
+
+        (c) The election is \textbf{\textit{not}} decided \textbf{\textit{and}} the votes have been counted
+
+        (d) If the votes have been counted, then the election is decided
+
+        (e) If the votes have not been counted, then the election is not decided 
+
+        (f) If the election is not decided, then the votes have not been counted 
+
+        (g) The election is decided if and only if the votes have been counted
+
+        (h) The votes have not been counted \textbf{\textit{or}} the election is \textbf{\textit{not}} decided \textbf{\textit{and}} the votes have been counted
+    \end{solution}
+\end{questions}
+
 \begin{problem}{2}
 Let $p$ and $q$ be the proposition
 \begin{itemize}
@@ -75,6 +98,26 @@ Write these propositions using $p$ and $q$ and logical connectives (including ne
 
 \end{problem}
 
+\begin{questions}
+    \question
+    \begin{solution}
+        
+        (a) $ p \land q $
+
+        (b) $ p \land \neg q $
+
+        (c) $ \neg p \land \neg q $ 
+
+        (d) $ q \lor p $
+
+        (e) $ p \implies q $
+
+        (f) $ (p \lor q) \land (p \implies \neg q)$
+
+        (g) $ p \iff q $
+    \end{solution}
+\end{questions}
+
 \begin{problem}{3}
 Construct a truth table for each of these compound propositions.
 \begin{itemize}
@@ -88,20 +131,120 @@ Construct a truth table for each of these compound propositions.
 
 \end{problem}
 
+\begin{questions}
+    \question
+    \begin{solution}
+
+        (a) $ p \land \neg p $
+        \[ 
+        \begin{array}{c | c || c}
+            p & \neg p & p \land \neg p \\ 
+            \hline
+            F & T & F \\ 
+            T & F & F
+        \end{array}
+        \]
+
+        (b) $ p \lor \neg p$
+        \[ 
+        \begin{array}{c | c || c}
+            p & \neg p & p \lor \neg p \\ 
+            \hline
+            F & T & T \\
+            T & F & T
+        \end{array}
+        \]
+
+        (c) $ (p \lor \neg q) \implies  q$
+        \[ 
+        \begin{array}{c | c | c | c || c}
+            p & q & \neg q & p \lor \neg q & (p \lor \neg q) \implies q \\ 
+            \hline
+            F & F & T & T & F  \\ 
+            F & T & F & F & T  \\ 
+            T & F & T & T & F  \\ 
+            T & T & F & T & T
+        \end{array}
+        \]
+
+        (d) $ (p \lor q) \implies (p \land q) $
+        \[ 
+        \begin{array}{c | c | c | c || c}
+            p & q & p \lor q & p \land q & (p \lor q) \implies (p \land q) \\ 
+            \hline
+            F & F & F & F & T    \\ 
+            F & T & T & F & F    \\
+            T & F & T & F & F    \\
+            T & T & T & T & T
+        \end{array}
+        \]
+
+        (e) $ (p \implies q) \leftrightarrow (\neg q \implies \neg p) $
+        \[ 
+        \begin{array}{c | c | c | c | c | c || c}
+            p & q & \neg p & \neg q & p \implies q & \neg q \implies \neg p & (p \implies q) \leftrightarrow (\neg q \implies \neg p) \\ 
+            \hline
+            F & F & T & T & T & T & T      \\ 
+            F & T & T & F & T & T & T      \\
+            T & F & F & T & F & F & T      \\ 
+            T & T & F & F & T & T & T      
+        \end{array}
+        \]
+
+        (f) $ (p \implies q) \implies (p \implies q) $
+        \[ 
+        \begin{array}{c | c | c || c}
+            p & q & p \implies q & (p \implies q) \implies (p \implies q) \\ 
+            \hline
+            F & F & T & T     \\ 
+            F & T & T & T     \\ 
+            T & F & F & T     \\ 
+            T & T & T & T
+        \end{array}
+        \]
+
+    \end{solution}
+\end{questions}
+
+\pagebreak
 \begin{problem}{4}
 In an Island there are two kinds of inhabitants, knights, who always tell the truth, and knaves, who always lie. You encounter two people
 A and B. Determine, if possible, what A and B are if they address you in the ways described.
 \begin{itemize}
     \item[(a)] A says ``At least one of us is a knave'' and B says nothing.
-    \item[(b)] A says ``The two of us are both knights'' and B says ``A is a knave''. 
+    \item[(b)] A says ``The two of us are both knights'' and B says ``A is a knave''.
     \item[(c)] A says ``I am a knave or B is a knight'' and B says nothing.
     \item[(d)] Both A and B say ``I am a knight''
-    \item[(e)] A says we ``We are both knaves '' and B says nothing. 
+    \item[(e)] A says we ``We are both knaves '' and B says nothing.
 \end{itemize}
 \end{problem}
+\begin{questions}
+    \question
+    \begin{solution}
+        
+        (a) If A is a knave, then he is telling the truth as there does indeed exist at least one knave. But knaves always lie, so A cannot be a knave. Then A is a knight. Knights always tell a truth, therefore, there must indee be a knave amongst the two. A cannot be a knave, therefore B is a knave.
+
+        (b) If A is a knight, then A's statement must be true. However, B's statement contradicts A's statement. So B cannot be a knight, and this case is false. However, if B is a knave, then B is telling a lie which is true, but contradicts A's statement, therefore, A's statement cannot be true. So this case is false \\ 
+        If A is a knave, and B is a knave, then B is telling the truth, so this can't be the case. \\ 
+        Then if A is a knave, and B is a knight, then there is no contradiction here, as A is telling a lie which holds true as a knave must always tell lies, and B is telling the truth that A is a knave. \\ 
+        Therefore, A is a knave and B is a knight. 
+
+        (c)  
+
+        (d) It cannot be determined as both statements can hold true in either scenarios. If A is a knight, he is telling the truth so is true, but if A is not a knight, the he is lying which means he is a knave, which is also true. \\ The same argument holds true for B, therefore A and B cannot be determined.
+
+        (e) If A is a knight, then this statement is false by the rules of the knight, therefore A is not a knight. So A must be a knave. A is a knave, then A's statement must be a lie and both cannot be knaves. Since A is a knave, then B cannot be a knave so B is a knight. \\ A is a knave and B is a knight. 
+    \end{solution}
+\end{questions}
 
 \begin{problem}{5}
-    Sheikh Chilly, famous for his bizarre sense of humor and love of logic puzzles, left the following clues
+Three friends are hanging out at a Cafe. The server approaches them and ask ``Who wants a slice of cake ?'' The first friend says ``I don't know''.
+The second friend says ``I don't know''. Finally, the third friend says ``No, not everyone wants cake''. The serves comes back and gives slices of cake to the
+friends who want . How did the server figure out who wanted the cake ? 
+\end{problem}
+
+\begin{problem}{6}
+Sheikh Chilly, famous for his bizarre sense of humor and love of logic puzzles, left the following clues
 regarding the location of the hidden treasure. The treasure can only be in one place.
 \begin{itemize}
     \item If the house is next to a lake, then the treasure is in the kitchen.
@@ -112,6 +255,41 @@ regarding the location of the hidden treasure. The treasure can only be in one p
 \end{itemize}
 Using rules of inference, determine where the treasure is hidden. Clearly state what your propositions
 represent.
+\end{problem}
+
+\begin{questions}
+    \question
+    \begin{solution}
+        
+    \end{solution}
+\end{questions}
+
+\begin{problem}{7}
+Show that following are logically equivalent without using truth tables
+\begin{itemize}
+    \item[(a)] $ (p \implies r) \lor (q \implies r)  \equiv  (p \land q) \implies r $
+    \item[(b)] $ p \land (q \lor r) \equiv (p \land q) \lor (p \land) r $
+    \item[(c)] $ \neg [\neg[(p \lor q) \land r] \lor \neg q] \equiv q \land r $
+        \item[(d)]$ (p \lor q \lor r) \land (p \lor t \lor \neg q) \land (p \lor \neg t \lor r) \equiv p \lor [r \land (t \lor \neg q)] $
+\end{itemize}
+
+\end{problem}
+
+\begin{questions}
+    \question
+    \begin{solution}
+        
+    \end{solution}
+\end{questions}
+
+\begin{problem}{8}
+Use Truth tables to see if the following statements are logically equivalent.
+\begin{itemize}
+    \item [(a)] $ p \implies (q \lor r) \equiv (q \implies p) \land (p \implies r) $
+    \item [(b)] $ (p \lor q) \implies r \equiv (p \implies r) \land (q \implies r) $
+    \item [(c)] $ p \implies (q \lor r) \equiv \neg r \implies ( p \implies q) $
+\end{itemize}
+
 \end{problem}
 
 \begin{questions}
