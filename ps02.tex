@@ -288,16 +288,24 @@ represent.
         1: $ p \implies q $ \\ 
         2: $ (\neg p \lor r) \implies (s \land \neg t) $ \\ 
         3: $ u \implies \neg t $ \\ 
-        4: $ \neg r \implies \neg t $ \\ 
+        4: $ \neg r \implies \neg s $ \\ 
         5: $ \neg q $
         
-        % Now we know that $ \neg q $ is true. \\ 
-        % % Then $ \neg q \implies \neg p $ (By Contrapositive) \\ 
-        % % So $ \neg p $ is true. 
-        % Then by Modus Tollens: \\ 
-        % $ p \implies q \\ \neg q \\ \therefore \neg p $ \\ 
-        % Then the house is not next to the lake. \\ 
-        % Then
+        \vspace{2mm}
+        Now we know that $ \neg q $ is true. \\ 
+        Then $ \neg q \implies \neg p $ (By Contrapositive) \\ 
+        So $ \neg p $ is true by Modus Tollens.
+        
+        Then: $ (\neg p \lor r) $ is true. \\ 
+        $ \therefore s \land \neg t $ is true. \\ 
+        $ \therefore s $ is true by Simplification \\ 
+        $ \therefore \neg t $ is true by Simplification 
+
+        Then by taking the contrapositive of proposition 4 \\ 
+        $ s \implies r $ [A conditional statement has the same truth value as its contrapositive] \\ 
+        Since $s \implies r$, and we know $s$ is true, therefore $r$ is true by Modus Ponens. 
+
+        Hence we can conclude that the treasure is buried under the flagpole.
     \end{solution}
 \end{questions}
 
