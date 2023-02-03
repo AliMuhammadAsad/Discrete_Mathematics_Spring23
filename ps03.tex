@@ -233,6 +233,15 @@ Determine whether $\forall x (P(x) \implies Q(x))$ and $\forall x P(x) \implies 
     \question
     \begin{solution}
 
+        The first statement says that for all $x$, if $ P(x) $ then $ Q(x) $. While the second statement says that for all $x$, if $ P(x) $, then for all $Q(x)$. \\ 
+        These are obviously not logically equivalent as by the first statement, if for any $x, P(x)$ is true, then $ Q(x) $ is also true for that $x$. However, the second statement says that if $ P(x) $ is true for any $x$, then $ Q(x) $ is true for all $x$. \\ 
+        Consider, \\ 
+        Let $ P(x) $ be the statement ``$x$ is a fish'' \\ 
+        Let $ Q(x) $ be the statement ``$x$ can fly when it rains'' 
+        
+        Then by the first statement, if $x$ is a fish, then $x$ can fly when it rains. \\ 
+        However, by the second statemnt, if any $x$ is a fish, then all fishes can fly when it rains. \\ 
+        Hence they are not logically equivalent.
     \end{solution}
 \end{questions}
 
@@ -244,6 +253,7 @@ Determine whether $\forall x (P(x) \leftrightarrow Q(x))$ and $\forall x P(x) \l
     \question
     \begin{solution}
         
+        We can use the argument in Problem 9 for this, however, keep in mind the double implication.
     \end{solution}
 \end{questions}
 
@@ -258,7 +268,7 @@ Show that  $\exists x (P(x) \lor Q(x))$ and $\exists x P(x) \lor \exists x Q(x)$
         Both are going to be true if anyone of $ P(x) $ or $ Q(x) $ are true for at least one value of $x$ in the domain | whatever the domain is [universe of discourse].
     \end{solution}
 \end{questions}
-\pagebreak
+% \pagebreak
 \begin{problem}{12}
 Show that  $\forall x P(x) \lor \forall Q(x)$ and $\forall x (P(x) \lor Q(x))$ are not logically equivalent.
 \end{problem}
