@@ -10,7 +10,7 @@
 \pagestyle{headandfoot}
 \runningheadrule
 \runningfootrule
-\runningheader{Discrete Mathematics}{Problem Set 1}{CS/Math 113}
+\runningheader{Discrete Mathematics}{Problem Set 2}{CS/Math 113}
 \runningfooter{}{Page \thepage\ of \numpages}{}
 \firstpageheader{}{}{}
 
@@ -248,7 +248,14 @@ friends who want . How did the server figure out who wanted the cake ?
     \begin{solution}
 
         (If the server was this smart then that server would never be serving in the first place. \\ Were those friends drunk? \\ 
-        Isn't that gonna be a bit rude btw in the real world scenario?)
+        C be like, the proof is left as an exercise for the waiter)
+
+        Let the first friend be A, the second friend be B, and the third friend be C. \\ 
+        The waiter's question was that if everyone wanted cake. \\ 
+        A replies ``I don't know''. Implying he doesn't know if everyone wanted cake. \\ 
+        B replies ``I don't know''. Implying he doesn't know if everyone wanted cake. \\ 
+        C replies ``No, not everyone wants cake'' implying that C did not want cake, as the question was if everyone wanted cake. \\ 
+        Therefore, C does not get cake but A and B do get cake.
     \end{solution}
 \end{questions}
 
@@ -269,28 +276,36 @@ represent.
 \begin{questions}
     \question
     \begin{solution}
-        % Our propositions are as follows: \\ 
-        % $p$: ``The house is next to a lake'' \\ 
-        % $q$: ``The tresure is in the kitchen'' \\ 
-        % $r$: ``The treasure is buried under the flagpole'' \\ 
-        % $s$: ``The tree in the front yard is an elm'' \\ 
-        % $t$: ``The tree in the back yard is an oak'' \\ 
-        % $u$: ``The treasure is in the garage'' 
+        Our propositions are as follows: \\ 
+        $p$: ``The house is next to a lake'' \\ 
+        $q$: ``The tresure is in the kitchen'' \\ 
+        $r$: ``The treasure is buried under the flagpole'' \\ 
+        $s$: ``The tree in the front yard is an elm'' \\ 
+        $t$: ``The tree in the back yard is an oak'' \\ 
+        $u$: ``The treasure is in the garage'' 
 
-        % The above situation in propositional logic can be represented as: \\ 
-        % 1: $ p \implies q $ \\ 
-        % 2: $ (\neg p \lor r) \implies (s \land \neg t) $ \\ 
-        % 3: $ u \implies \neg t $ \\ 
-        % 4: $ \neg r \implies \neg t $ \\ 
-        % 5: $ \neg q $
+        The above situation in propositional logic can be represented as: \\ 
+        1: $ p \implies q $ \\ 
+        2: $ (\neg p \lor r) \implies (s \land \neg t) $ \\ 
+        3: $ u \implies \neg t $ \\ 
+        4: $ \neg r \implies \neg s $ \\ 
+        5: $ \neg q $
         
-        % Now we know that $ \neg q $ is true. \\ 
-        % % Then $ \neg q \implies \neg p $ (By Contrapositive) \\ 
-        % % So $ \neg p $ is true. 
-        % Then by Modus Tollens: \\ 
-        % $ p \implies q \\ \neg q \\ \therefore \neg p $ \\ 
-        % Then the house is not next to the lake. \\ 
-        % Then
+        \vspace{2mm}
+        Now we know that $ \neg q $ is true. \\ 
+        Then $ \neg q \implies \neg p $ (By Contrapositive) \\ 
+        So $ \neg p $ is true by Modus Tollens.
+        
+        Then: $ (\neg p \lor r) $ is true. \\ 
+        $ \therefore s \land \neg t $ is true. \\ 
+        $ \therefore s $ is true by Simplification \\ 
+        $ \therefore \neg t $ is true by Simplification 
+
+        Then by taking the contrapositive of proposition 4 \\ 
+        $ s \implies r $ [A conditional statement has the same truth value as its contrapositive] \\ 
+        Since $s \implies r$, and we know $s$ is true, therefore $r$ is true by Modus Ponens. 
+
+        Hence we can conclude that the treasure is buried under the flagpole.
     \end{solution}
 \end{questions}
 
